@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.ooad.v1.mapper.GradeMapper">
+
+
+    <select id="selectGradeByUserIdAndCourseId" resultType="org.ooad.v1.entity.Grade">
+        select * from grade where user_id = #{user_id} and course_id = #{course_id};
+    </select>
+
+    <select id="selectGradesByCourseId" resultType="org.ooad.v1.entity.Grade">
+        select * from grade where course_id = #{course_id};
+    </select>
+</mapper>
